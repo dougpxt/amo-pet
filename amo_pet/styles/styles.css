@@ -1,0 +1,2605 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Lato:ital,wght@0,300; 1.400&family=Poppins:wght@200;800&display=swap');
+
+
+@import url('header.css');
+@import url('testimonials.css');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body { 
+    background-color: #fff9ea;
+    margin: 0;
+}
+
+.divs {
+    padding: 28px 8%;
+}
+/*  */
+aside{
+    
+}
+/* ----------------------------------- Barra de navegação -----------------------------------*/
+header {
+    width: 100%; /* Largura*/
+    padding: 28px 8%; /* 28 px na parte superior (em cima) e 8% na lateral */
+    position: sticky;
+    top: 0;
+    background-color: #fff9ea;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+
+/* Parte Web da barra de navegação */
+#navbar {
+    width: 95%; /* Largura barra de navegação */
+    display: flex; /* Um elemento ao lado do outro */
+    align-items: center; /* Alinhar elementos */
+    justify-content: space-between; /* Espaço automático entre cada elemento */
+}
+
+#navbar #mobile_menu {
+    margin-left: 500px;
+}
+
+
+/* Logo */
+#nav_logo {
+    margin-left: 50px;
+    font-size: 25px; /* Tamanho da fonte na logo */
+    color: #e9a209;
+}
+
+
+/* Itens da lista */
+#nav_list {
+    display: flex; /* Um elemento ao lado do outro na lista */
+    list-style: none; /* Tirar o ponto ao lado do texto na lista */
+    gap: 48px; /* Espaçamento entre os elementos (texto) na lista */
+}
+
+
+/* Mexer em cada item da lista (direto no texto) */
+.nav-item a {
+    text-decoration: none; /* Tirar o sublinhado das palavras em geral na lista */
+    color: #1d1d1dad;
+    font-weight: 600; /* Espessura das palavras */
+}
+
+/*Colocar na class="nav_item ==active==" para aparecer esse risco embaixo do texto */
+.nav-item.active a {
+    color: #1d1d1d;
+}
+
+.nav-item.active a:hover {
+    border-bottom: 3px solid #f8d477; /* px de largura, modelo e cor */
+    color: #f8d477;
+    padding-bottom: 4px; /* Espaço entre o texto e o risco */
+}
+
+
+/* Esconder as opções de menu que só irá aparecer no mobile (celular) */
+
+/* Aqui irá sumir o elemento de clicar e aparecer o menu (3 risco um sobre o outro) */
+#mobile_btn {
+    display: none;
+}
+
+
+/* Aqui irá sumir o menu mobile (celular) */
+#mobile_menu {
+    display: none;
+}
+
+
+/* Login */
+.btn-default {
+    border: none; /* Borda no botão */
+    display: flex; /* Se caso colocar algum item ficar um ao lado do outro */
+    align-items: center; /* Alinhar itens */
+    justify-content: center; /* Justificar centro de conteúdo*/
+    background-color: #ffcb45; /* Cor de fundo no botão */
+    border-radius: 12px; /* Arredondar as pontas do botão */
+     /* Espaçamento entre o texto e a borda do botão (Altura e largura) */
+    font-weight: 600; /* Espessura da fonte */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Alterar o modelo do ponteiro do cursor quando passar por cima do elemento BOTÃO */ 
+    transition: background-color .3s ease; /* Transição na hora de mudar de cor quando passar o mouse */
+    width: 100%;
+    margin: 8px 0;
+}
+
+/* Mudar o botão Login de cor quando passar o mouse */
+.btn-default:hover {
+    background-color: #f8d477;
+}
+
+
+/* ----------------------------------- LOGIN MODAL -----------------------------------*/
+form {
+    background-color: #ffffffc2;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Formulário login - modal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+}
+
+/* Input login - modal */
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Label login - modal */
+label {
+    font-size: 12px;
+    color: #666;
+    width: 250px;
+}
+
+/* Links login - modal */
+.link {
+    text-decoration: none;
+    margin: 30px 0;
+}
+
+/* Botão login - modal */
+.btn-login {
+    background-color: #e9a209;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 10PX;
+}
+
+/* Botão login muda de cor - modal */
+.btn-login:hover {
+    background-color: #f9b728;
+}
+
+/* Botão GOOGLE login - modal */
+.btn-externa-login {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    border: 1px solid #e0e0e0;
+    transition: 1s;
+}
+
+.btn-externa-login:hover {
+    background-color: rgb(227, 224, 224);
+}
+
+.btn-externa-login img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* INÍCIO MODAL */
+/* Botão login */
+button {
+    /* background-color: #04AA6D; */
+    padding: 14px 20px;
+    /* border: solid 0.3px black; */
+}
+
+/* O modal (plano de fundo) */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fique no lugar */
+    z-index: 1; /* Sente-se em cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura completa */
+    height: 100%; /* Altura toda */
+    overflow: auto; /* Ative a rolagem, se necessário */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+
+/* Conteúdo modal/caixa */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% de cima, 15% de baixo e centralizado */
+    border: 1px solid #888;
+    width: 350px; /* Pode ser mais ou menos, dependendo do tamanho da tela
+    */
+    height: 550px;
+  }
+
+/* O botão fechar (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  /* O botão fechar (x) */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Adicionar animação de zoom */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Alterar estilos de extensão e botão cancelar em telas muito pequenas */
+  @media screen and (max-width: 300px) {
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+
+/* ----------------------------------- INÍCIO -----------------------------------*/
+/* A PARTE INTEIRA DE CONTEÚDO DA PÁGINA INÍCIO na "main" */
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px); /* Altura minima */
+    position: relative;
+}
+
+/* A PARTE DE CONTEÚDOS A ESQUERDA DA PÁGINA */
+#principal {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+/* O TÍTULO PRINCIPAL DA PÁGINA */
+#principal .title {
+    font-size: 3.5rem;
+    color: #1d1d1d;
+}
+
+/* A PALAVRA "Leve um pra casa" NO TÍTULO */
+#principal .title span {
+    color: #e9a209;
+}
+
+/* PARÁGRAFO */
+#principal .description {
+    font-size: 1.6rem;
+}
+
+/* FOTO PRINCIPAL DA PÁGINA */
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 60%;
+    z-index: 2; /* Jogar a logo para trás da imagem */
+
+    margin: 20px 20px 0 0 ;
+}
+
+/* FOTO PRINCIPAL DA PÁGINA */
+#banner img {
+    height: 90%;
+    width: fit-content;
+}
+
+/* UM BANNER DE FUNDO NA IMAGEM PRINCIPAL */
+.shape {
+    background-color: #ffe8b4;
+    width: 40%;
+    height: 95%;
+    margin: 25px 90px 0 0;
+    position: absolute;
+    border-radius: 35% 35% 35% 35%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* ----------------------------------- QUEM SOMOS -----------------------------------*/
+.quem-somos {
+    display: flex;
+    width: 100%;
+}
+
+.quem-somos #imagem-quemSomos {
+    margin: 0 0 0 50px;
+}
+
+#quem-somos {
+    background-color: rgb(236, 96, 15);
+    color: #fff;
+    padding: 70px 130px;
+}
+
+#quem-somos h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+#principal-quemSomos {
+    margin-left: 100px;
+}
+
+
+#principal-quemSomos p a {
+    text-decoration: none;
+    
+}
+
+#principal-quemSomos p {
+    width: 590px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#principal-quemSomos #p-quemsomos {
+    width: 600px;
+    font-size: 20px;
+}
+
+/* ----------------------------------- Quero adotar  -----------------------------------*/
+#conheca-eles {
+    width: 40%;
+    margin-left: 45px;
+}
+
+#conheca-eles h2{
+    font-size: 35px;
+    margin: 120px 0 50px ;
+}
+
+#conheca-eles p{
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+#dogs {
+    display: flex;
+    gap: 10px;
+}
+
+#dogs li {
+    list-style: none;
+}
+
+
+#dogs #imagem1{
+    margin: 50px 40px;
+    width: 250px;
+}
+
+.quero-adotar {
+    display: flex;
+}
+
+#quero-adotar h1 {
+    font-size: 40px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+
+/* Quero adotar CARDS */
+/* TÍTULO DO CARD */
+.section-title {
+    font-size: 1.763rem;
+    color: #e9a209;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* CARDS */
+.card-pets {
+    width: 290px;
+    height: 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    padding-bottom: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* Botão saiba mais */
+.saiba-mais {
+    border: none; /* Borda no botão */
+    display: flex; /* Se caso colocar algum item ficar um ao lado do outro */
+    background-color: #ffcb45; /* Cor de fundo no botão */
+    border-radius: 3px; /* Arrepondar as pontas do botão */
+    font-weight: 650; /* Espessura da fonte */
+    cursor: pointer; /* Alterar o modelo do ponteiro do cursor quando passar por cima do elemento BOTÃO */ 
+    transition: background-color .3s ease; /* Transição na hora de mudar de cor quando passar o mouse */
+    font-size: 15px;
+    margin: 0 90px;
+}
+
+/* Botão saiba mais */
+.saiba-mais:hover {
+    background-color: #f8d477;
+}
+
+/* Imagem Cards */
+.card-pets img {
+    width: 260px;
+    height: 300px;
+    align-items: center;
+    margin: 0 15px
+}
+
+
+/* Cards */
+#cards-adotar {
+    display: flex;
+    gap: 24px;
+}
+
+/* Nome do pet no card */
+.dish-title {
+    gap: 50px;
+    margin: 7px 112px;
+    font-size: 20px;
+}
+
+
+.nome-pet {
+    gap: 50px;
+    margin: 10px 42px;
+    font-size: 19px;
+}
+
+#adotar-mensagem {
+    width:500px;
+    height:400px;
+    margin: 25px 90px;
+}
+
+#adotar-h3 {
+    font-size: 1.763rem;
+    /*color: #e9a209;*/
+    text-align: center;
+    margin-top: 18px;
+}
+
+#adotar-p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* ----------------------------------- Quero ajudar  -----------------------------------*/
+#quero-ajudar {
+    background-color: rgb(236, 96, 15);
+    height: 700px;
+}
+
+#to-help {
+    color: #fff;
+    min-height: calc(100vh - 91px);
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+#display {
+    display: flex;
+    margin-top: 60px;
+}
+
+#display #conta-bancaria {
+    width: 500px;
+    margin: 0 160px;
+}
+
+.como-ajudar li {
+    margin: 0 20px;
+}
+
+.como-ajudar {
+    margin-left: 50px;
+}
+
+#paragrafo-ajudar {
+    width: 500px;
+}
+
+
+
+span {
+    color: #060606;
+}
+
+
+#to-help h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: -30px 0 40px 0;
+}
+
+#to-help h3 {
+    font-size: 28px;
+}
+
+#to-help {
+    margin: 60px 0;
+    font-size: 17px;
+}
+
+.p-bancos {
+    margin-top: 20px;
+}
+
+
+
+/*.como-ajudar h2, #conta-bancaria h2 {
+    margin-top: 60px;
+}
+.como-ajudar p, #conta-bancaria p {
+    margin: 20px 0;
+}*/
+
+/* ----------------------------------- CONTATO -----------------------------------*/
+
+#contato {
+    /*background-color: rgb(22, 155, 181);*/
+}
+
+#contato-mensagem {
+    margin-left: 50px;
+}
+
+.contatos {
+    display: flex;
+    width: 600px;
+    height: 400px;
+}
+
+#contato-titulo {
+    text-align: center;
+    font-size: 40px;
+}
+
+.contatos h3 {
+    width: 600px;
+    margin-top: 40px;
+    font-size: 28px;
+   
+}
+
+.contatos p {
+    width: 500px;
+    margin-top: 20px;
+}
+
+#formulario {
+    margin: 50px 235px;
+    background: none;
+}
+
+.form>input {
+    width: 500px;
+    border: solid 0.2px #e9a209;
+    cursor: pointer;
+}
+
+#mensagem {
+    height: 100px;
+}
+
+#enviar {
+    border-radius: 10px;
+    width: 200px;
+    border: solid 0.2px #e9a209;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    background: #e9a209;
+    color: #fff;
+    font-size: 15px;
+    border: solid 0.2px #e9a209;
+    cursor: pointer;
+}
+
+/* =================== REDES SOCIAIS EM CONTATO =================== */
+
+/* REDES SOCIAIS */
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+/* REDES SOCIAIS */
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+/* REDES SOCIAIS */
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 20px rgba(19, 19, 19, 0.1);
+} 
+
+
+#contato .contatos  p{
+    margin-top: -0.5px;
+}
+
+#footer-social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i {
+    font-size: 1.25ren;
+}
+
+#footer-social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background: #4267b3;
+}
+
+#whatsapp {
+    background: #25d366;
+}
+
+#twitter {
+    background: #1872b3; 
+}
+
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer-social-media {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+#footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i {
+    font-size: 1.25ren;
+}
+
+#footer-social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background: #4267b3;
+}
+
+#whatsapp {
+    background: #25d366;
+}
+
+#twitter {
+    background: #1872b3; 
+}
+
+#enviar {
+    background-color: #fff;
+    color: rgb(138, 122, 122);
+}
+
+
+/* ----------------------------------- RODAPÉ -----------------------------------*/
+.footer-link {
+    text-decoration: none;
+}
+
+#nav_logo {
+    margin-left: 45px;
+}
+
+footer {
+    width: 100%;
+    background-color: #ffe8b4;
+    color: #fff;
+}
+
+
+#footer-content {
+    background-color: rgb(236, 96, 15);
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dizer que quero 4 colunas */
+    padding: 3rem 3.5rem; /* Espaçamento entre a colunas*/
+    justify-content: center;
+}
+
+#footer-contatos {
+    margin-left: 70px;
+}
+
+#footer-contatos p {
+    color: #fff;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+.footer-list {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    grid-area: 0.75rem;
+    list-style: none;
+    margin: 0 130px;
+}
+
+.footer-list .footer-link {
+    color: #fff;
+}
+
+.footer-list .footer-link:hover {
+    color: black;
+}
+
+#footer{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 -10px;
+}
+
+#footer h3 {
+    margin: 0 0 -23px -60px;
+}
+
+#footer p{
+    color: #fff;
+    margin: 0 -60px;
+    font-size: 15.5px;
+}
+
+
+#footer-social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i {
+    font-size: 1.25ren;
+}
+
+#footer-social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background: #4267b3;
+}
+
+#whatsapp {
+    background: #25d366;
+}
+
+#twitter {
+    background: #1872b3; 
+}
+
+
+
+#input-grupo {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    border: solid 1px #fff;;
+    border-radius: 4px;
+    margin: 0 -60px;
+}
+
+#input-grupo input {
+    all: unset;
+    padding: 0.75rem;
+    width: 400px;
+}
+
+#input-grupo input::placeholder{
+    color: #fbfafa;
+}
+
+#input-grupo #botao {
+    background-color: #ffcb45;
+    border: none;
+    color: #fff;
+    padding: 0 1.25rem;
+    font-size: 1.125rem; 
+    height: 100%;
+    border-radius: 0 4px 4ps 0;
+    cursor: pointer;
+}   
+
+#input-grupo #botao:hover {
+    opacity: 0.8;
+}
+
+#footer-copyrigth {
+    display: flex;
+    justify-content: center;
+    /*background-color: ;*/
+    color: #0e0c0c;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100; /* Espessura da fonte
+     */
+}
+
+
+/* ----------------------------------- MEDIA SCREEN -----------------------------------*/
+
+@media screen and (max-width: 426px) {
+    #footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none;
+    }
+
+    #principal {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and(max-width: 600px){
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #footer_items {
+       flex-direction: column; /* Para ficar um abaixo do outro */
+    }
+
+    #to-help {
+        font-size: 2rem;
+    }
+
+    .card-pets {
+        width: 100%;
+    }
+
+    #menu .section-subtitle {
+        text-align: 4;
+    }
+
+    #banner img {
+        width: 300px;
+        height: 300px;
+        margin: 0 -120px;
+    }
+
+    /*--------------------------QUEM SOMOS----------------------------*/
+    #principal-quemSomos #imagem-icone {
+        display: none;
+    }
+
+    #flex {
+        flex-direction: column-reverse;
+    }
+
+    #principal-quemSomos h1 {
+        font-size: 40px;
+        margin: 0 -170px;
+        margin-top: -10px;
+    }
+
+    #principal-quemSomos p {
+        width: 300px;
+        margin: 10px -175px;
+    }
+
+    #principal-quemSomos h2 {
+        font-size: 18px;
+        width: 300px;
+        margin: 5px -170px;
+    }
+
+    .quem-somos img {
+        width: 240px;
+        height: 240px;
+        margin: 30px -50px;
+    }
+
+    #quem-somos {
+        height: 1000px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    /*------------------------QUERO ADOTAR----------------------------------------*/
+    .quero-adotar {
+        flex-direction: column;
+    }
+
+    #conheca-eles h2 {
+        width: 500px;
+        font-size: 30px;
+        margin: -10px 4px;
+    }
+
+    #conheca-eles P {
+        width: 330px;
+        margin: 40px 4px;
+
+    }
+
+    #dogs {
+        flex-direction: column-reverse;
+    }
+
+    #cards-adotar {
+        flex-direction: column-reverse;
+    }
+
+    #adotar-mensagem p {
+        width: 320px;
+        margin: 15px -80px;
+    }
+
+
+    /*-------------------ADOTAR--------------------*/
+    #adotar-mensagem h3 {
+        font-size: 20px;
+        margin: 0 -80px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 1023.99px) {
+    #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-pets {
+        width: calc(50% - 12px);
+    }
+
+    #home {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner img {
+        margin-top: 25px;
+    }
+
+    
+    .shape {
+        display: none;
+        flex-direction: column;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 1170px){
+    #to-help {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    /*Botão hamburguer*/
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent; /* Tirar cor de fundo */
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 0 -65px;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+
+    #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-pets {
+        width: calc(50% - 12px);
+    }
+}
+
+
+
+
+
+
+/* tela de smartPhone pequena */
+@media only screen and (min-width:292px) and (max-width:479.99px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #nav_logo {
+        margin-left: -15px;
+    }
+     /*inicio*/
+    main #principal .title span {
+        font-size: 40px;
+        margin-left: -65px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+     /*inicio*/
+    main #principal .description {
+        width: 410px;
+        margin-left: -65px;
+        font-size: 20px;
+    }
+
+    .description2 {
+        text-align: justify;
+    }
+     /*inicio*/
+    main #principal p {
+        width: 410px;
+        font-size: 15px;
+        margin-left: -65px;
+        text-align: justify;
+    }
+     /*inicio Foto*/
+    main #banner {
+        width: 100px;
+        height: 300px;
+        margin-left: 250px;
+    }
+
+    /*quem-somos*/
+    main #principal-quemSomos img {
+        display: none;
+    }
+    main .divs .quem-somos{
+        flex-direction: column-reverse;
+    }
+   
+    /*quem-somos*/
+    main #quem-somos h1 {
+        font-size: 35px;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: -15px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+    /*quem-somos*/
+    main  #principal-quemSomos p, h2 {
+        width: 420px;
+        font-size: 15px;
+        margin-left: -215px;
+        text-align: justify;
+    }
+
+    main  #principal-quemSomos #p-quemsomos {
+        width: 410px;
+    }
+    
+    /*quem-somos*/
+    main #imagem-quemSomos {
+        height: 350px;
+    }
+
+    /*quem-somos*/
+    main #imagem-quemSomos img {
+        width: 300px;
+        height: 300px;
+        margin: 60px 0 0 -90px;
+    }
+
+    /*quero adotar*/
+    main .quero-adotar {
+        flex-direction: column;
+    }
+
+    main #quero-adotar h1 {
+        font-size: 35px;
+        margin-left: -10px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs {
+        margin: 0px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem2 {
+        width: 170px;
+
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem1 {
+        width: 170px;
+        margin: 0;
+    }
+
+    /*quero adotar*/
+    main #conheca-eles h2 {
+        margin-left: -65px;
+        margin-top: 15px;
+        font-size: 32px;
+        text-align: justify;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+
+    /*Quero adotar*/
+    main #conheca-eles p {
+        width: 410px;
+        font-size: 15px;
+        margin: 25px 0 30px -65px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar {
+        height: 1150px;
+    }
+
+    main #quero-ajudar #to-help h2 {
+        font-size: 35px;
+        margin-left: -20px;
+    }
+
+   
+    /*Quero ajudar*/
+    main #quero-ajudar #display {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main #quero-ajudar #display p {
+        width: 410px;
+        margin-left: -15px;
+        font-size: 15px;
+    }
+
+    main #quero-ajudar #display #paragrafo-ajudar {
+        width: 410px;
+        margin: 20px 0 0 -65px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar h3 {
+        margin-left: -225px;
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    main #quero-ajudar #display .como-ajudar #p-h3 {
+        font-size: 20px;
+        margin-left: -320px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar p {
+        width: 300px;
+        margin: 0px;
+        text-align:justify
+    }
+    
+    /*Quero ajudar*/
+    #p-h3 {
+        margin: 0 -160px;
+        font-size: 23px;
+    }
+
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display ul {
+        margin-left: -70px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display #conta-bancaria {
+        /*white-space: nowrap; Evitar quebra de texto*/
+        margin: 0px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    #conta-bancaria p{
+        font-size: 30px;
+        text-align: justify;
+    }
+
+    #conta-bancaria h3 {
+        font-size: 23px;
+        margin-left: -15px;
+    }
+    
+    /*Quero ajudar*/
+    #contas {
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    #conta-bancaria .p-bancos {
+        margin-top: 30px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #conta-bancaria #contas {
+        display: flex;
+    }
+
+    /*Contatos*/
+    main .contatos {
+        flex-direction: column;
+        height: 900px;
+        margin-left: -70px;
+        text-align: justify;
+    }
+
+    main .contatos p {
+        width: 400px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    #formulario {
+        margin-left: 185px;
+    }
+
+    #formulario input {
+        width: 400px;
+    }
+
+    #footer-content #nav_logo {
+        text-align: justify;
+        margin: 0 -90px ;
+    }
+
+    #footer-contatos p {
+        margin: 10px -90px;
+        font-size: 15px;
+    }
+
+    #footer-content .footer-list {
+        margin: 0 -20px;
+        font-size: 15px;
+    }
+
+    #footer-content #footer {
+        margin: 0 40px;
+    }
+
+    footer #footer {
+        width: 250px;
+    }
+
+    #input-grupo {
+        width: 400px;
+    }
+
+}
+
+
+/* tela de smartPhone grande */
+@media only screen and (min-width:480px) and (max-width:599.99px){
+    /*inicio*/
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #nav_logo {
+        margin-left: -25px;
+    }
+    #home {
+        flex-direction: column;
+    }
+     /*inicio*/
+    main #principal .title span {
+        font-size: 55px;
+        margin-left: -80px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+     /*inicio*/
+    main #principal .description {
+        width: 460px;
+        font-size: 28px;
+        margin: 5px 0 0 -78px;
+        text-align: justify;
+    }
+
+    .description2 {
+        text-align: justify;
+    }
+     /*inicio*/
+    main #principal p {
+        font-size: 18px;
+        width: 460px;
+        margin: 10px 0 0 -77px;
+    }
+     /*inicio foto*/
+    main #banner {
+        width: 150px;
+        height: 400px;
+        margin: 0 0 30px 250px;
+    }
+
+    /*quem-somos*/
+    main #principal-quemSomos img {
+        display: none;
+    }
+    main .divs .quem-somos{
+        flex-direction: column-reverse;
+    }
+    /*quem-somos*/
+    main .divs .quem-somos #img-icone {
+        display: none;
+    }
+    /*quem-somos*/
+    main .divs #principal-quemSomos h1 {
+        font-size: 45px;
+        margin: -70px 0 30px  -100px;
+    }
+    /*quem-somos*/
+    main  #principal-quemSomos p, h2 {
+        width: 460px;
+        font-size: 20px;
+        margin: 0 0 0 -218px;
+        text-align: justify;
+    }
+
+    main  #principal-quemSomos #p-quemsomos {
+        width: 560px;
+    }
+    /*quem-somos*/
+    main #imagem-quemSomos {
+        height: 450px;
+   
+    }
+
+    /*quem-somos*/
+    main #imagem-quemSomos img {
+        width: 390px;
+        height: 390px;
+        margin: 60px -80px;
+    }
+
+    /*quero adotar*/
+    main .quero-adotar {
+        flex-direction: column;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs {
+        margin: 0 -10px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem2 {
+        width: 200px;
+        margin: 50px -10px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem1 {
+        width: 200px;
+    }
+
+
+    /*Quero adotar*/
+    main #conheca-eles p {
+        font-size: 20px;
+        margin: 25px 0 0 -68px;
+        width: 540px;
+        text-align: justify;
+    }
+
+    
+
+    /*Quero ajudar*/
+    main #quero-ajudar {
+    height: 1320px;
+    }
+
+    main #quero-ajudar h2 {
+        margin: 0px 0 0 -20px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main #quero-ajudar #display p {
+        width: 490px;
+        margin: -10;
+        font-size: 20px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar h3 {
+        margin-left: -310px;
+        margin-top: 30px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar p {
+        width: 540px;
+        margin: 10px 0 0 -73px;
+        text-align:justify
+    }
+    
+    /*Quero ajudar*/
+    #p-h3 {
+        margin: 0 -170px;
+        font-size: 23px;
+    }
+
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display ul {
+        margin: 10px 0 10px -75px;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display #conta-bancaria {
+        /*white-space: nowrap; Evitar quebra de texto*/
+        width: 540px;
+        margin: -23px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    #conta-bancaria p{
+        font-size: 30px;
+    }
+    
+    /*Quero ajudar*/
+    #contas {
+        flex-direction: column;
+    }
+
+    #conta-bancaria .p-bancos {
+        margin-top: 30px;
+    }
+
+    /*Quer ajudar*/
+    main #quero-ajudar #conta-bancaria #contas {
+        display: flex;
+    }
+
+    /*Contatos*/
+    main .contatos {
+        flex-direction: column;
+        height: 900px;
+        margin-left: -70px;
+        text-align: justify;
+    }
+
+    /*Contatos*/
+    main .contatos p {
+        width: 540px;
+        
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    /*Contatos*/
+    #formulario {
+        margin: 60px 250px;
+    }
+
+    /*Contatos*/
+    #formulario input {
+        width: 400px;
+    }
+
+    /*Footer*/
+    #footer-content #nav_logo {
+        text-align: justify;
+        margin: 0 -100px ;
+    }
+
+    /*Footer*/
+    #footer-contatos p {
+        margin: 10px -100px;
+        font-size: 18px;
+    }
+
+    /*Footer*/
+    #footer-content .footer-list {
+        margin: 10px -30px;
+        font-size: 18px;
+    }
+
+    /*Footer*/
+    #footer-content #footer {
+        margin-left: 30px;
+    }
+
+}
+
+
+
+
+
+/* tela de tablet pequena OOOOOOOOOOOOOOOK*/
+@media only screen and (min-width:600px) and (max-width:799.99px){
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    /*Botão hamburguer*/
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent; /* Tirar cor de fundo */
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 0 -90px;
+    }
+
+    #nav_logo {
+        margin: -40px;
+    }
+    
+    #home {
+        flex-direction: column;
+    }
+     /*inicio*/
+    main #principal .title span {
+        font-size: 60px;
+        margin-left: -95px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+     /*inicio*/
+    main #principal .description {
+        width: 730px;
+        margin-left: -95px;
+        text-align: justify;
+        font-size: 30px;
+    }
+
+    .description2 {
+        text-align: justify;
+    }
+     /*inicio*/
+    main #principal p {
+        width: 730px;
+        font-size: 20px;
+        margin: 10px 0 0 -95px;
+        text-align: justify;
+    }
+     /*inicio*/
+    main #banner {
+        width: 200px;
+        height: 500px;
+        margin: 0 0 30px 360px;
+    }
+
+    /*quem-somos*/
+    main #principal-quemSomos img {
+        display: none;
+    }
+    main .divs .quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    /*quem-somos*/
+    main .divs .quem-somos #img-icone {
+        display: none;
+    }
+    /*quem-somos*/
+    main .divs #principal-quemSomos h1 {
+        white-space: nowrap; /*Evitar quebra de texto*/
+        font-size: 45px;
+        margin: -70px 0 30px -100px;
+    }
+    /*quem-somos*/
+    main  #principal-quemSomos p, h2 {
+        width: 750px;
+        font-size: 20px;
+        margin-left: -220px;
+        text-align: justify;
+    }
+    /*quem-somos*/
+    main #imagem-quemSomos {
+        height: 450px;
+    }
+
+    /*quem-somos*/
+    main #imagem-quemSomos img {
+        width: 400px;
+        height: 400px;
+        margin: 60px 0px;
+    }
+
+    /*quero adotar*/
+    main .quero-adotar {
+        flex-direction: column;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs {
+        margin: 0 -60px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem2 {
+        width: 230px;
+        margin: -5px 0 0 100px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem1 {
+        width: 230px;
+        margin-left: 60px;
+    }
+
+    /*quero adotar*/
+    main #conheca-eles h2 {
+        margin: 10px 0 50px -89px;
+    }
+
+    /*Quero adotar*/
+    main #conheca-eles p {
+        width: 735px;
+        font-size: 18px;
+        margin: 25px -88px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar {
+    height: 1150px;
+    }
+
+    main #quero-ajudar h2 {
+        margin: -40px 0 0 -50px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main #quero-ajudar #display p {
+        font-size: 18px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar h3 {
+        margin-left: -490px;
+        margin-top: 30px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar p {
+        width: 690px;
+        margin: 10px -87px;
+        text-align:justify
+    }
+    
+    /*Quero ajudar*/
+    #p-h3 {
+        margin: 0 -160px;
+        font-size: 23px;
+    }
+
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display ul {
+        margin-left: -93px;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display #conta-bancaria {
+        /*white-space: nowrap; Evitar quebra de texto*/
+        margin: -40px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    #conta-bancaria p{
+        font-size: 30px;
+    }
+    
+    /*Quero ajudar*/
+    #contas {
+        flex-direction: column;
+    }
+
+    #conta-bancaria .p-bancos {
+        margin-top: 30px;
+    }
+
+    /*Quer ajudar*/
+    main #quero-ajudar #conta-bancaria #contas {
+        display: flex;
+    }
+
+    /*Contatos*/
+    main .contatos {
+        height: 900px;
+        margin-left: -90px;
+        text-align: justify;
+        flex-direction: column;
+    }
+
+    main .contatos p {
+        width: 730px;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #formulario {
+        margin: 60px 340px;
+    }
+
+    #formulario input {
+        width: 670px;
+    }
+
+    /*Rodapé*/
+    #footer-content #nav_logo {
+        margin: 0 -100px;
+    }
+
+    /*Rodapé*/
+    #footer-contatos p {
+        margin: 5px 0 30px -100px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content .footer-list {
+        margin: 10px -30px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content #footer {
+        margin: 30px 30px;
+    }
+
+    /*Rodapé*/
+    footer #footer-content {
+        display: block;
+    }
+
+    #input-grupo {
+        width: 550px;
+    }
+
+    #input-grupo #email {
+        width: 500px;
+    }
+
+    #input-grupo #botao {
+        width: 100px;
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+/* tela de tablet grande */
+@media only screen and (min-width:800px) and (max-width:1023.99px) {
+    * {
+        margin: 0%;
+        padding: 0%;
+    } 
+
+    /*Botão hamburguer*/
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent; /* Tirar cor de fundo */
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 0 -90px;
+    }
+
+    #nav_logo {
+        margin: -40px;
+    }
+    
+    #home {
+        flex-direction: column;
+    }
+     /*inicio*/
+    main #principal .title span {
+        font-size: 65px;
+        margin-left: -95px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+     /*inicio*/
+    main #principal .description {
+        width: 870px;
+        margin-left: -95px;
+        text-align: justify;
+        font-size: 35px;
+    }
+
+    .description2 {
+        text-align: justify;
+    }
+     /*inicio*/
+    main #principal p {
+        width: 870px;
+        font-size: 23px;
+        margin: 10px 0 0 -95px;
+        text-align: justify;
+    }
+     /*inicio*/
+    main #banner {
+        width: 300px;
+        height: 600px;
+        margin: 10px 0 20px 400px;
+    }
+
+    /*quem-somos*/
+    main #principal-quemSomos img {
+        display: none;
+    }
+    main .divs .quem-somos{
+        flex-direction: column-reverse;
+    }
+
+
+    /*quem-somos*/
+    main .divs #principal-quemSomos h1 {
+        white-space: nowrap; /*Evitar quebra de texto*/
+        font-size: 90px;
+        margin: -70px 0 30px -100px;
+    }
+
+    main .divs #principal-quemSomos #p-quemsomos {
+        width: 870px;
+        font-size: 25px;
+    }
+    /*quem-somos*/
+    main  #principal-quemSomos p, h2 {
+        width: 870px;
+        font-size: 23px;
+        margin-left: -205px;
+        text-align: justify;
+    }
+    /*quem-somos*/
+    main #imagem-quemSomos {
+        height: 450px;
+    }
+
+    /*quem-somos*/
+    main #imagem-quemSomos img {
+        width: 450px;
+        height: 450px;
+        margin: 60px 100px;
+    }
+
+    /*quero adotar*/
+    main .quero-adotar {
+        flex-direction: column;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs {
+        margin: 0 -60px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem2 {
+        width: 290px;
+        margin: -5px 0 0 90px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem1 {
+        width: 290px;
+        margin-left: 100px;
+        
+    }
+
+    /*quero adotar*/
+    main #conheca-eles h2 {
+        font-size: 35px;
+        margin: 10px 0 50px -87px;
+    }
+
+    /*Quero adotar*/
+    main #conheca-eles p {
+        width: 870px;
+        font-size: 23px;
+        margin: 25px -88px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar {
+    height: 1220px;
+    }
+
+    main #quero-ajudar h2 {
+        font-size: 50px;
+        margin: -40px 0 0 -50px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main #quero-ajudar #display p {
+        font-size: 20px;
+        margin-left: -20px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar h3 {
+        margin-left: -655px;
+        margin-top: 30px;
+        font-size: 26px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar p {
+        width: 870px;
+        margin: 30px -90px;
+        text-align:justify
+    }
+    
+    /*Quero ajudar*/
+    main #quero-ajudar #display #p-h3 {
+        margin: 0 0 0 -505px;
+        font-size: 26px;
+    }
+
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display ul {
+        margin: -10px -93px;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display #conta-bancaria {
+        /*white-space: nowrap; Evitar quebra de texto*/
+        margin-left: -25px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    #conta-bancaria p{
+        font-size: 30px;
+    }
+
+    #conta-bancaria h3{
+        margin-left: -20px;
+        width: 870px;
+        font-size: 28px;
+    }
+    
+    /*Quero ajudar*/
+    #contas {
+        flex-direction: column;
+    }
+
+    #conta-bancaria .p-bancos {
+        width: 870px;
+        margin-top: 30px;
+    }
+
+    /*Quer ajudar*/
+    main #quero-ajudar #conta-bancaria #contas {
+        display: flex;
+    }
+
+    /*Contatos*/
+    main .contatos {
+        height: 900px;
+        margin-left: -90px;
+        text-align: justify;
+        flex-direction: column;
+    }
+
+    main .contatos p {
+        width: 870px;
+        font-size: 23px;
+        text-align: justify;
+    }
+
+    #formulario {
+        margin: 60px 425px;
+    }
+
+    #formulario input {
+        width: 670px;
+    }
+
+    /*Rodapé*/
+    #footer-content #nav_logo {
+        margin: 0 -100px;
+    }
+
+    /*Rodapé*/
+    #footer-contatos p {
+        margin: 5px 0 30px -100px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content .footer-list {
+        margin: 10px -30px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content #footer {
+        margin: 30px 30px;
+    }
+
+    /*Rodapé*/
+    footer #footer-content {
+        display: block;
+    }
+
+    #input-grupo {
+        width: 550px;
+    }
+
+    #input-grupo #email {
+        width: 500px;
+    }
+
+    #input-grupo #botao {
+        width: 100px;
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+
+/* tela de notebook */
+@media only screen and (min-width: 1024px) and (max-width:1280px){
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #nav_logo {
+        margin: -70px;
+    }
+    
+    /*#home {
+        flex-direction: column;
+    }*/
+     /*inicio*/
+    main #principal .title span {
+        font-size: 50px;
+        margin-left: -120px;
+        white-space: nowrap; /*Evitar quebra de texto*/
+    }
+     /*inicio*/
+    main #principal .description {
+        width: 820px;
+        margin-left: -95px;
+        text-align: justify;
+        font-size: 35px;
+    }
+
+    .description2 {
+        text-align: justify;
+    }
+     /*inicio*/
+    main #principal p {
+        width: 820px;
+        font-size: 23px;
+        margin: 10px 0 0 -95px;
+        text-align: justify;
+    }
+     /*inicio*/
+    main #banner {
+        width: 300px;
+        height: 600px;
+        margin: 10px 0 20px 350px;
+    }
+
+    /*quem-somos*/
+    main #principal-quemSomos img {
+        display: none;
+    }
+    main .divs .quem-somos{
+        display: flex;
+    }
+
+
+
+    /*quem-somos*/
+    main .divs .quem-somos #img-icone {
+        display: none;
+    }
+    /*quem-somos*/
+    main .divs #principal-quemSomos h1 {
+        white-space: nowrap; /*Evitar quebra de texto*/
+        font-size: 90px;
+        margin: -70px 0 30px -100px;
+    }
+
+    main .divs #principal-quemSomos #p-quemsomos {
+        width: 850px;
+        font-size: 25px;
+    }
+    /*quem-somos*/
+    main  #principal-quemSomos p, h2 {
+        width: 850px;
+        font-size: 23px;
+        margin-left: -220px;
+        text-align: justify;
+    }
+    /*quem-somos*/
+    main #imagem-quemSomos {
+        height: 450px;
+    }
+
+    /*quem-somos*/
+    main #imagem-quemSomos img {
+        width: 450px;
+        height: 450px;
+        margin: 60px 0px;
+    }
+
+    /*quero adotar*/
+    main .quero-adotar {
+        flex-direction: column;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs {
+        margin: 0 -60px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem2 {
+        width: 230px;
+        margin: -5px 0 0 100px;
+    }
+
+    /*quero adotar*/
+    main #quero-adotar #dogs .imagem1 {
+        width: 230px;
+        margin-left: 60px;
+    }
+
+    /*quero adotar*/
+    main #conheca-eles h2 {
+        font-size: 40px;
+        margin: 10px 0 50px -89px;
+    }
+
+    /*Quero adotar*/
+    main #conheca-eles p {
+        width: 735px;
+        font-size: 25px;
+        margin: 25px -88px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar {
+    height: 1440px;
+    }
+
+    main #quero-ajudar h2 {
+        font-size: 50px;
+        margin: -40px 0 0 -50px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main #quero-ajudar #display p {
+        font-size: 24px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar h3 {
+        margin-left: -455px;
+        margin-top: 30px;
+        font-size: 40px;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display .como-ajudar p {
+        width: 690px;
+        margin: 10px -87px;
+        text-align:justify
+    }
+    
+    /*Quero ajudar*/
+    #p-h3 {
+        margin: 0 -240px;
+        font-size: 23px;
+    }
+
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display ul {
+        margin: 10px 0 20px -93px;
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    main #quero-ajudar #display #conta-bancaria {
+        /*white-space: nowrap; Evitar quebra de texto*/
+        margin: -40px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    /*Quero ajudar*/
+    #conta-bancaria p{
+        font-size: 30px;
+    }
+
+    #conta-bancaria h3{
+        width: 700px;
+        font-size: 40px;
+    }
+    
+    /*Quero ajudar*/
+    #contas {
+        flex-direction: column;
+    }
+
+    #conta-bancaria .p-bancos {
+        margin-top: 30px;
+    }
+
+    /*Quer ajudar*/
+    main #quero-ajudar #conta-bancaria #contas {
+        display: flex;
+    }
+
+    /*Contatos*/
+    main .contatos {
+        height: 900px;
+        margin-left: -90px;
+        text-align: justify;
+        flex-direction: column;
+    }
+
+    main .contatos p {
+        width: 730px;
+        font-size: 23px;
+        text-align: justify;
+    }
+
+    #formulario {
+        margin: 60px 380px;
+    }
+
+    #formulario input {
+        width: 670px;
+    }
+
+    /*Rodapé*/
+    #footer-content #nav_logo {
+        margin: 0 -100px;
+    }
+
+    /*Rodapé*/
+    #footer-contatos p {
+        margin: 5px 0 30px -100px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content .footer-list {
+        margin: 10px -30px;
+        font-size: 18px;
+    }
+
+    /*Rodapé*/
+    #footer-content #footer {
+        margin: 30px 30px;
+    }
+
+    /*Rodapé*/
+    footer #footer-content {
+        display: block;
+    }
+
+    #input-grupo {
+        width: 550px;
+    }
+
+    #input-grupo #email {
+        width: 500px;
+    }
+
+    #input-grupo #botao {
+        width: 100px;
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* tela de desktop */
+@media only screen and (min-width: 1280px) and (max-width: 1479.99px){
+    * {
+        margin: 0%;
+        padding: 0%;
+    } 
+    .shape {
+        background-color: #ffe8b4;
+        width: 40%;
+        height: 80%;
+        margin: 130px 70px 0 0px;
+        position: absolute;
+        border-radius: 33% 33% 33% 33%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    #nav_logo {
+        margin: 0%;
+    }
+
+    .btn-default {
+        margin: 0 -50px 0 0;
+    }
+    
+    main .divs .quem-somos {
+        display: flex;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1480px){
+    
+}
+
+
+
+
+
+

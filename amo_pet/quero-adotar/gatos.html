@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="indexpaginaentrada.html">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/indexpaginaentrada.html">
+
+</head>
+
+<body>
+     <li>
+          <a href="../index.html">
+               <img src="img/seta-esquerda.png" width="30px" list-style="none" alt="">
+          </a>
+     </li>
+
+     
+     <div class="container">
+          <!-- clacificaçao de cards para estilizaçao das cores -->
+          <div class="cards">
+               <img class="img" src="img/gatos.jpeg" alt="gatos" />
+
+               <div>
+                    <h3>Gatos filhotes</h3>
+                    <p class="paragra">Filhotes <br> Macho, Fêmea </p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+
+
+
+               </div>
+
+          </div>
+          <div class="cards">
+               <img class="img" src="img/Juma.jpeg" alt="gatos" />
+               <div>
+                    <h3>Juma</h3>
+                    <p class="paragra">Fêmea <br>
+                         Adulta</p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+               </div>
+          </div>
+
+          <div class="cards">
+               <img class="img" src="img/novo_gato.jpeg" alt="gatos">
+               <div>
+                    <h3>Miuda</h3>
+                    <p class="paragra">Fêmea <br>
+                         Adulta</p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+               </div>
+          </div>
+
+
+
+
+
+          <div class="cards">
+               <img class="img" src="img/bonito.jpg" alt="" />
+               <div>
+                    <h3>Bonito</h3>
+                    <p class="paragra">Macho <br>
+                         Adulto</p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+               </div>
+          </div>
+
+          <div class="cards">
+               <img class="img" src="img/Felix.jpeg" alt="" />
+               <div>
+                    <h3>Felix</h3>
+                    <p class="paragra">Macho <br>
+                         Adulto</p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+               </div>
+          </div>
+
+          <div class="cards">
+               <img class="img" src="img/Tarzan.jpg" alt="" />
+               <div>
+                    <h3>Will</h3>
+                    <p class="paragra">Macho <br>
+                         Adulto</p>
+                    <button class="botao" onclick="abrirModal()">Adotar</button>
+               </div>
+          </div>
+
+
+
+
+
+
+          <div class="cards">
+               <img class="img" src="img/Teto.jpeg" alt="" />
+               <h3>Teto</h3>
+               <p class="paragra">Macho<br>
+                    Adulto</p>
+               <button class="botao" onclick="abrirModal()">Adotar</button>
+          </div>
+
+          <div class="cards">
+               <img class="img" src="img/Menina.jpeg" alt="" />
+               <h3>Menina</h3>
+               <p class="paragra">Fêmia <br>
+                    Adulta</p>
+               <button class="botao" onclick="abrirModal()">Adotar</button>
+          </div>
+
+
+     </div>
+
+
+
+     <!-- modal -->
+
+     <div id="modal">
+          <div class="conteudo-modal">
+               <div class="conteudo-modal-titulo">
+                    <h1>Adotar agora</h1>
+
+                    <a href="#" onclick="fecharModal()">X</a>
+               </div>
+               <h4>Que bom que você tem interesse em adotar este pet!
+                    Para iniciar o processo, precisamos de alguns de seus dados. Suas respostas serão encaminhadas
+                    diretamente para a
+                    instituição que está abrigando o pet, agilizando o processo de adoção.</h4>
+
+               <form id="formulario">
+
+                    <input type="text" name="nome" id="nome" required placeholder="Nome Completo">
+
+
+                    <input type="email" name="email" id="nome" required placeholder="E-mail">
+
+
+
+                    <!-- <input type="data" name="data"  required placeholder="data"> -->
+
+
+                    <input type="tel" name="telefoni" required placeholder="Telefone">
+
+
+
+                    <!-- <input type="text" name="endereco" required placeholder="Endereço"> -->
+
+
+                    <!-- <input type="cep" name="cep"  required placeholder="Cep"> -->
+
+
+
+                    <label for="job"></label>
+
+                    <select name="sp" id="sp" type="selecione" name="cidade" required placeholder="Cidade">
+                         <option value="">selecione uma cidade</option>
+                         <option value="">São Paulo</option>
+                         <option value="">São Bernardo</option>
+                         <option value="">Sorocaba</option>
+
+
+                    </select>
+
+
+
+
+
+                    <!-- <input type="text" name="msg"  required placeholder="Mensagem"> -->
+                    <textarea name="message" id="message" type="text" name="msg" required
+                         placeholder="Mensagem"></textarea>
+                    <div class="botoes">
+                         <button class="botao btn" type="submit">Enviar</button>
+                         <button class="botao" type="submit">Cancelar</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <script src="modal.js"></script>
+
+
+</body>
+
+</html>

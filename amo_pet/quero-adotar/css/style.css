@@ -1,0 +1,670 @@
+body{
+    background-color: #f2e4bf;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    gap: 1rem; /* Espaço entre os elementos (TEXTO NA LISTA) */
+    justify-content: center;
+   
+}
+.lista>li{
+    border: 1px solid  #f6ebcf;  
+    background-color:  #fff9ea;
+    color: black;
+    
+}
+.lista>li:hover{
+    background-color: #4CAF50;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center; /* Alinhar conteudo*/
+    text-align: center; /*Alinha o texto dentro da div*/
+    justify-content: center;
+    margin: 0;
+    
+}
+
+
+.cards {
+    width: 300px;
+    background-color: #fff;
+    margin: 10px;
+    /*display: flex;*/
+    text-align: center;
+    flex-direction: column; 
+   /* align-items: center;
+    gap: 4px;
+    height: 40%;*/
+    border-radius: 5%;
+    /*deixar Sombra da caixa (uma div, cards)*/
+    box-shadow: 10px 10px 15px 2px #ccc;
+}
+.img{
+    width: 100%;
+    height:  296px;
+    border-radius: 5%, 0;
+    margin: 0px; /* Espaço nos 4 lados do elemento (IMAGEM)*/
+    /*padding:4px ; /*espaçamento de dentro*/
+}
+
+#logo{
+    background-color: #fff9ea;
+    color: #fff;
+    border-bottom: solid 1px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.paragra{
+    text-align: left;
+    padding: 8px;
+}
+
+/* .botao{
+  font-size: x-large;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+} */
+.botao{
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 10px;
+  color: rgb(9, 9, 9);
+  background-color: #fff9ea;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  width: 80px;
+}
+.botao:hover{
+  background-color: rgb(189, 90, 10);
+  color: white;
+  transform: scale(1.2)
+    
+} 
+
+.cards img{
+  border-radius: 20px;
+
+}
+
+
+/* Full-width input fields */
+ /* input[type=text], input[type=password] {  
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+   button { 
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+li{
+  list-style: none;
+  margin: 10px;
+  color: white;
+}
+
+
+
+
+
+/* Modal */
+
+#modal{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.75);
+  display: none;
+
+}
+
+#modal .conteudo-modal{
+  background-color: rgb(214, 154, 105);
+  color: #000;
+  width: 30rem;
+  padding: 20px;
+  border-radius: 20px;
+  position: fixed;
+  top: 130px;
+ 
+}
+
+#modal .conteudo-modal .conteudo-modal-titulo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal .conteudo-modal .conteudo-modal-titulo a{
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  margin-right: 15px;
+}
+
+
+#modal .conteudo-modal{
+  font-family: helvetica;
+    box-sizing: border-box;
+    
+}
+/* #body{ 
+  padding: 1rem;
+}*/  
+
+
+/* #form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 400px;
+    margin: 0 auto;
+} */
+
+input,option,textarea{
+  background-color: white;
+  
+  text-align: center;
+}
+input,select,textarea{
+  width: 100%;
+  /* padding: 10px; */
+   border: 1px solid #060000; 
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #757373;
+  
+}
+
+.btn{
+  width: 120px;
+}
+
+.botoes{
+  display: flex;
+  /* alinhamento de formas iguais  */
+  justify-content: space-between;
+}
+ p{
+  text-align:center;
+  /* padding-inline:10px ; */
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*bernardo*/
+
+/* ----------------------------------- RODAPÉ -----------------------------------*/
+.footer-link {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  background-color: #ffe8b4;
+  color: #fff;
+}
+
+
+#footer-content {
+  background-color: rgb(236, 96, 15);
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Dizer que quero 4 colunas */
+  padding: 3rem 3.5rem; /* Espaçamento entre a colunas*/
+  justify-content: center;
+}
+
+#footer-contatos {
+  margin-left: 70px;
+}
+
+#footer-contatos p {
+  color: #fff;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.footer-list {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  grid-area: 0.75rem;
+  list-style: none;
+  margin: 0 70px;
+}
+
+.footer-list .footer-link {
+  color: #fff;
+}
+
+.footer-list .footer-link:hover {
+  color: black;
+}
+
+#footer{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 -10px;
+}
+
+#footer h3 {
+  margin: 0 0 -23px -60px;
+}
+
+#footer p{
+  color: #fff;
+  margin: 0 -60px;
+  font-size: 15.5px;
+}
+
+
+#footer-social-media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i {
+  font-size: 1.25ren;
+}
+
+#footer-social-media .footer-link:hover {
+  opacity: 0.8;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background: #4267b3;
+}
+
+#whatsapp {
+  background: #25d366;
+}
+
+#twitter {
+  background: #1872b3; 
+}
+
+
+
+#input-grupo {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border: solid 1px #fff;;
+  border-radius: 4px;
+  margin: 0 -60px;
+}
+
+#input-grupo input {
+  all: unset;
+  padding: 0.75rem;
+  width: 400px;
+}
+
+#input-grupo input::placeholder{
+  color: #fbfafa;
+}
+
+#input-grupo #botao {
+  background-color: #ffcb45;
+  border: none;
+  color: #fff;
+  padding: 0 1.25rem;
+  font-size: 1.125rem; 
+  height: 100%;
+  border-radius: 0 4px 4ps 0;
+  cursor: pointer;
+}   
+
+#input-grupo #botao:hover {
+  opacity: 0.8;
+}
+
+#footer-copyrigth {
+  display: flex;
+  justify-content: center;
+  /*background-color: ;*/
+  color: #0e0c0c;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100; /* Espessura da fonte
+   */
+}
+
+
+/* ----------------------------------- MEDIA SCREEN -----------------------------------*/
+
+@media screen and (max-width: 426px) {
+  #footer-content {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  #phone_button button {
+      display: none;
+  }
+
+}
+
+
+
+@media screen and(max-width: 600px){
+  #footer_items {
+     flex-direction: column; /* Para ficar um abaixo do outro */
+  }
+
+  #to-help {
+      font-size: 2rem;
+  }
+
+  .card-pets {
+      width: 100%;
+  }
+
+  #menu .section-subtitle {
+      text-align: 4;
+  }
+
+  #banner img {
+      width: 300px;
+      height: 300px;
+      margin: 0 -120px;
+  }
+
+  /*--------------------------QUEM SOMOS----------------------------*/
+  #principal-quemSomos #imagem-icone {
+      display: none;
+  }
+
+  #flex {
+      flex-direction: column-reverse;
+  }
+
+  #principal-quemSomos h1 {
+      font-size: 40px;
+      margin: 0 -170px;
+      margin-top: -10px;
+  }
+
+  #principal-quemSomos p {
+      width: 300px;
+      margin: 10px -175px;
+  }
+
+  #principal-quemSomos h2 {
+      font-size: 18px;
+      width: 300px;
+      margin: 5px -170px;
+  }
+
+  .quem-somos img {
+      width: 240px;
+      height: 240px;
+      margin: 30px -50px;
+  }
+
+  #quem-somos {
+      height: 1000px;
+  }
+
+  .flex {
+      flex-direction: column;
+  }
+
+  /*------------------------QUERO ADOTAR----------------------------------------*/
+  .quero-adotar {
+      flex-direction: column;
+  }
+
+  #conheca-eles h2 {
+      width: 500px;
+      font-size: 30px;
+      margin: -10px 4px;
+  }
+
+  #conheca-eles P {
+      width: 330px;
+      margin: 40px 4px;
+
+  }
+
+  #dogs {
+      flex-direction: column-reverse;
+  }
+
+  #cards-adotar {
+      flex-direction: column-reverse;
+  }
+
+  #adotar-mensagem p {
+      width: 320px;
+      margin: 15px -80px;
+  }
+
+
+  /*-------------------ADOTAR--------------------*/
+  #adotar-mensagem h3 {
+      font-size: 20px;
+      margin: 0 -80px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #footer-content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 1023.99px) {
+  #dishes {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .card-pets {
+      width: calc(50% - 12px);
+  }
+
+  #home {
+      min-height: 100%;
+      padding-top: 0px;
+  }
+
+  #banner img {
+      margin-top: 25px;
+  }
+
+  
+  .shape {
+      display: none;
+      flex-direction: column;
+  }
+
+  #cta {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 1170px){
+  #to-help {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  #nav_list,
+  #navbar .btn-default {
+      display: none;
+  }
+
+  #mobile_btn {
+      display: block;
+      border: none;
+      background-color: transparent; /* Tirar cor de fundo */
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 0 -50px;
+  }
+
+  #mobile_menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #mobile_nav_list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 12px 0px;
+  }
+
+  #mobile_nav_list .nav-item {
+      list-style: none;
+      text-align: center;
+  }
+
+  #dishes {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .card-pets {
+      width: calc(50% - 12px);
+  }
+}
+
+
+/* tela de smartPhone pequena */
+@media only screen and (min-width:292px) and (max-width:479.99px){
+
+  body {
+      margin: 0%;
+      padding: 0%;
+  }
+
+
+  #footer-content #nav_logo {
+      text-align: justify;
+      margin: 0 -90px ;
+  }
+
+  #footer-contatos p {
+      margin: 10px -90px;
+      font-size: 15px;
+  }
+
+  #footer-content .footer-list {
+      margin: 0 -20px;
+      font-size: 15px;
+  }
+
+  #footer-content #footer {
+      margin: 0 40px;
+  }
+
+  footer #footer {
+      width: 250px;
+  }
+
+  #input-grupo {
+      width: 400px;
+  }
+
+}
+
+
+/* tela de smartPhone grande */
+@media only screen and (min-width:480px) and (max-width:599.99px){
+
+  /*Footer*/
+  #footer-content #nav_logo {
+      text-align: justify;
+      margin: 0 -85px ;
+  }
+
+  /*Footer*/
+  #footer-contatos p {
+      margin: 10px -85px;
+      font-size: 18px;
+  }
+
+  /*Footer*/
+  #footer-content .footer-list {
+      margin: 10px -15px;
+      font-size: 18px;
+  }
+
+  /*Footer*/
+  #footer-content #footer {
+      margin: 0 50px;
+  }
+
+}
