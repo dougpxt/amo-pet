@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Spot Login</title>
+        <link rel="stylesheet" href="login.css">
+        <script type="module" src="script/action.js"></script>
+    </head>
+
+    <body id="body-login">
+        <div class="contaner" id="login-modal">
+            <div id="efeito">
+                <h1>Petspot</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi officiis, in sapiente ducimus itaque quibusdam quo repudiandae ullam id perspiciatis, minima voluptate natus obcaecati pariatur quos consequatur modi doloremque dolore!</p>
+            </div>
+            
+            <div class="criar-cadastro" id="cadastrar">
+                    <h2>Criar Cadastro</h2>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <input type="email" id="email" placeholder="Digite seu Email">
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                    <input type="password" id="confirmarSenha" placeholder="Confirme sua senha">
+                    <button class="button">
+                        <input  type="file" accept="image/*" id="imagem">
+                    </button>
+                    <div class="btn" id="botaoCadastrar">
+                        Cadastrar
+                    </div>
+            </div>
+            
+
+            <div id="fazer-login">
+                <h2>PetSpot</h2>
+                <input type="email" id="email2" placeholder="Digite seu Email">
+                <input type="password" id="senha2" placeholder="Digite sua senha">
+                <a href="chatbox_petSpot.html">
+                    <div class="btn" id="botaoLogin">
+                        Entrar
+                    </div>
+                </a>
+                <a href="#" id="botaoAnimacao" >
+                    Não tem cadastro?
+                </a>
+            </div>
+        </div>
+    <!--  -->
+
+        <script type="module">
+            import { animacao, writeUserData } from './script/action.js'
+
+            var mudar = document.getElementById("efeito");
+            var t_login = document.getElementById("fazer-login");
+            var t_cadastrar = document.getElementById("cadastrar");
+
+            var botaoAnimacao = document.getElementById("botaoAnimacao")
+            var botaoCadastrar = document.getElementById(`botaoCadastrar`)
+            var botaoLogin = document.getElementById('botaoLogin')
+            // 
+            function login(email, pwd){
+                localStorage.setItem(`email`, email)
+                localStorage.setItem(`pwd`, pwd)
+            }
+            
+            botaoAnimacao.addEventListener('click', function(){
+                animacao(mudar, t_login, t_cadastrar);
+            })
+            botaoCadastrar.addEventListener('click', function(){
+                var nome = document.getElementById('nome').value
+                var email = document.getElementById('email').value
+                var senha = document.getElementById('senha').value
+                var imagem = document.getElementById(`imagem`).value
+                
+                writeUserData(nome, email, senha);
+                
+                mudar.style.left = "0px";
+                t_login.style.zIndex = "1";
+                t_cadastrar.style.zIndex = "-1";
+            })
+            botaoLogin.addEventListener('click', function(){
+                var email2 = document.getElementById('email2').value
+                var senha2 = document.getElementById('senha2').value
+
+                login(email2, senha2)
+            })
+        </script>
+    </body>
+</html>

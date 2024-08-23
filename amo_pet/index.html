@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script type="module" src="script/action.js"></script>
+    <title>Amo Pet</title>
+
+    <style>
+        /* Add this CSS to create a grid layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+        .main-content {
+            grid-column: 1;
+        }
+        .chatbox {
+            grid-column: 2;
+        }
+
+        * {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            padding: 0%;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            overflow-x: hidden;
+        }
+    </style>    
+</head>
+<body>
+    <aside id>
+        <iframe id="chatbox_iframe" src="../chat/chatbox.html" style="width: 100%; height: 100%; border: none;"></iframe>
+    </aside>
+    <button id="toggleChatboxButton" style="position: fixed; bottom: 20px; right: 20px;">Toggle Chat</button>
+    
+    <!-- Início -->
+    <main id="content">
+        <header>
+            <nav id="navbar">
+                <!-- logo -->
+                <i class="fa-solid fa-dog" id="nav_logo">AMOPET</i>
+    
+                <!-- lista com 3 opções no menu -->
+                <ul id="nav_list">
+                    <li class="nav-item active">
+                        <a href="#home">Início</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quem-somos">Quem somos</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quero-adotar">Quero adotar</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quero-ajudar">Quero ajudar</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+    
+                <!-- Botão -->
+                <button class="btn-default" onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </button>
+
+                 <!-- 3 risco opção de MENU -->
+                <button id="mobile_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+    
+    
+            <!-- Esse menu irá aparecer só na opção MOBILE (Celular)-->
+            <div id="mobile_menu">
+                <!-- lista com 3 opções no menu -->
+                <ul id="mobile_nav_list">
+                    <li class="nav-item active">
+                        <a href="#home">Início</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quem-somos">Quem somos</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quero-adotar">Quero adotar</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#quero-ajudar">Quero ajudar</a>
+                    </li>
+    
+                    <li class="nav-item active">
+                        <a href="#contato   ">Contato</a>
+                    </li>
+                </ul>
+    
+                <!-- Botão -->
+                <button class="btn-default" onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
+                    Login
+                </button>
+            </div>
+        </header>
+        <div class="divs" id="home" >
+            <div class="shape"></div>
+            <div id="principal">
+                
+                <br>
+                <h1 class="title">
+                    <span>Leve um pra casa</span>
+                </h1>
+                <br>
+
+                <p class="description"><b>Nosso site está cheio de doguinhos e gatinhos ansiosos por uma família.</b></p>
+                <p>As ongs parceiras cuida de animais resgatados ou abandonados e queremos compartilhar todo esse amor com mais pessoas por meio da adoção.</p>
+                <p class="description2">Ter um animal de estimação traz benefícios para a saúde física e mental. É uma troca de amor e carinho que faz bem pra todo mundo. Leve um pra casa: cuida dele e deixe que ele cuide de você também</p>
+
+                <p class="description2">Nós cuidamos deles.<b> Agora deixe que eles cuidem de você.</b></p>
+            </div>
+
+            <div id="banner">
+                <img src="imagem/imagem-dogs01.png" alt="">
+            </div>
+        </div>
+
+
+        <!-- Quem somos -->
+        <div class="divs" id="quem-somos">
+            <h1>Quem somos</h1>
+            <div class="quem-somos">
+                
+                <div id="imagem-quemSomos">
+                    <img src="imagem/quem-somos.png" alt="">
+                </div>
+
+                <div id="principal-quemSomos">
+                    <p>O Amo Pet é uma das maiores plataforma online de adoção de animais do Brasil.</p>
+
+                    <p>O que queremos de verdade é inspirar pessoas a se reconectar e adotar cães ou gatos. Por isso, nosso trabalho é mostrar os animais que estão em abrigos para pessoas que estejam procurando por um pet para chamar de seu melho amigo.</p>
+                    <p>Tudo começou em 2024, com a ideia de três alunos da escola Senac Tito, de dar mais atenção e visibilidade aos animais que estão em ONGS de todo o estado de São Paulo, e com isso eles podem ter uma casinha pra dormir, brincar e receber todo o amor que merecem!</p>
+                    <br>
+                    <br>
+                    <p id="p-quemsomos"><b>Navegue abaixo para conhecer os cães e gatos que estão esperando um lar.</b></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Quero adotar -->
+        <div class="divs" id="quero-adotar">
+            <div>
+                <br>
+                <h1>Quero adotar</h1>
+             
+                    <div class="quero-adotar">
+                        <div id="conheca-eles">
+                            <br>
+                            <br>
+                            <h2 id="subtitulo">Conheça os bichinhos</h2>
+
+                            <p>Nossos parceiros (ONGS) abrigam uma diversidade encantadora de animais: dos menores aos maiores, dos mais jovens aos mais experientes, dos mais tranquilos aos mais brincalhões.</p>
+
+                            <p><b>Ajudamos você a encontrar o seu novo melhor amigo. Confira aqui gatos e cachorros para adoção clicando em uma imagem.</b></p>
+
+                            <p><b>Amigo não se compra.</b></p>
+                        </div>
+
+                        <div id="dogs">
+                            <br>
+                            <div>
+                                <li>
+                                    <a href="../Projeto Amo Pet/quero-adotar/dogs.html">
+                                        <img class="imagem1" id="imagem1" src="imagem/dog-blue.png" alt="">
+                                    </a>
+                                </li>
+                                
+                            </div>
+                            <div>
+                                <li>
+                                    <a href="../Projeto Amo Pet/quero-adotar/gatos.html">
+                                        <img class="imagem2" id="imagem1" src="imagem/dog-esmeralda.png" alt="">
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        <!-- Quero ajudar -->
+        <div class="divs" id="quero-ajudar">
+            <div>
+            <section id="to-help" >
+                <h2>Quero ajudar</h2>
+
+                <div id="display">
+                        <div class="como-ajudar">
+                            <h3>Objetivo do programa</h3>
+
+                            <p class="p-bancos" id="paragrafo-ajudar">O objetivo de nosso programa é colaborar com a alimentação de cães e gatos de abrigos, protetores e ONGs, que desempenham um trabalho responsável e fundamental na vida desses pets.</p>
+                            <br>
+                            <h3 class="p-bancos" id="p-h3">A maioria das ONGS precisam de:</h3>
+
+                            <br>
+                            <ul>
+                                <li>Medicamentos veterinários</li>
+                                <li>Ração e alimentação</li>
+                                <li>Higiene e limpeza</li>
+                            </ul>
+
+                            <p id="paragrafo-ajudar">Ou qualquer outro produto que ofereça suporte e proteção aos 
+                            animais resgatados, como: Cama, roupa, cobertores, brinquedos e etc.</p>
+                        </div>
+
+                        <div id="conta-bancaria">
+                            <h3>Depósito, transferência ou PIX</h3>
+
+                            <p class="p-bancos">Se você optar por fazer depósito bancário e ou transferência bancária é imprescindível que nos envie o comprovante</p>
+
+                            <p class="p-bancos">Amo Pet plataforma online de adoção de animais</p>
+
+                            <p>CNPJ 00.108.678/1234-12</p>
+                        
+                            <div id="contas">
+                                <div>
+                                    <p class="p-bancos"><b>Banco Itaú</b></p>
+                                    <p>Agência: 2234</p>
+                                    <p>Conta corrente: 12312-1</p>
+                                    <p>PIX - 00.108.678/1234-12</p>
+                                </div>
+
+                                <div>
+                                    <p class="p-bancos"><b>Banco do Brasil</b></p>
+                                    <p>Agência: 1211-4</p>
+                                    <p>Conta corrente: 404.815-6</p>
+                                    <p>PIX - pixbb@amopet.org.br</p>
+                                </div>
+
+                                <div>
+                                    <p class="p-bancos"><b>Banco Bradesco</b></p>
+                                    <p>Agência: 0584</p>
+                                    <p>Conta Corrente: 3077-5</p>
+                                    <p>PIX - pixbradesco@amopet.org.br</p>
+                                </div>
+                            </div>
+                        </div>
+
+                            
+                </div>
+
+            </section>
+            </div>
+        </div>
+
+
+        <div class="divs" id="contato">
+            <h1 id="contato-titulo">Contato</h1>
+
+            <div class="contatos">
+                <div id="contato-mensagem">
+                    <h3>Fale com a gente</h3>
+                    <p>Envie-nos uma mensagem, nosso time de atendimento está à disposição para 
+                        te auxiliar com qualquer questão ou entre em contato nos números abaixo</p>
+                    
+                    <h3>Telefones:</h3>
+                    <p>(11) 3399-5581 - (11) 98877-5115</p>
+
+                    <h3>Redes sociais</h3>
+                    <p>Ficou com alguma dúvida ou gostaria de falar com a gente atráves de nossas mídias sociais ou WhatsApp? Nos mande mensagem que logo responderemos!</p>
+                    <div id="footer-social-media">
+                        <a href="https://www.instagram.com/" class="footer-link" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" class="footer-link" id="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" class="footer-link" id="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="https://web.whatsapp.com/" class="footer-link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="formularios">
+                    <form action="" id="formulario">
+                        <div class="form">
+                            <input class="form" type="text" id="name" required placeholder="Seu nome">
+
+                            <input class="form" type="email" id="email" required placeholder="E-mail">
+
+                            <input class="form" type="text" id="assunto" required placeholder="Qual o assunto do contato?">
+
+                            <input class="form" id="mensagem" type="text" required placeholder="Deixe sua mensagem">
+                        </div>
+                        <button id="enviar">Enviar contato</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <footer >
+            <section>
+                <div id="footer-content">
+                    <div id="footer-contatos">
+                        <!-- logo -->
+                        <i class="fa-solid fa-dog" id="nav_logo">AMOPET</i>
+                        <br>
+                        <p>Nosso trabalho é conectar os animais que estão em abrigos com pessoas que estejam procurando por 
+                            um doguinho ou gatinho pra chamar de seu.</p>
+                    </div>
+                    <div>
+                        <ul class="footer-list">
+                            <li>
+                                <h3>Home</h3>
+                            </li>
+    
+                            <li>
+                                <a href="#home" class="footer-link">Início</a>
+                            </li>
+    
+                            <li>
+                                <a href="#quem-somos" class="footer-link">Quem somos</a>
+                            </li>
+    
+                            <li>
+                                <a href="#quero-adotar" class="footer-link">Quero adotar</a>
+                            </li>
+    
+                            <li>
+                                <a href="#quero-ajudar" class="footer-link">Quero ajudar</a>
+                            </li>
+    
+                            <li>
+                                <a href="#contato" class="footer-link">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+    
+                    <div id="footer">
+                        <h3>Se inscrever</h3>
+    
+                        <p>Digite seu e-mail para ser notificado sobre novos animais.</p>
+    
+                        <div id="input-grupo">
+                            <input type="email" id="email" placeholder="E-mail">
+                            <button id="botao">
+                                <i class="fa-regular fa-envelope"></i>
+                            </button>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+            <div id="footer-copyrigth">
+                &#169
+                2024 todos os direitos reservados
+            </div>
+        </footer>
+
+
+        <!-- LOGIN (formulário) MODAL -->
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+    
+                <div class="container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+                        <h2>Login</h2>
+                        <label for="">E-mail</label>
+                        <input type="email" placeholder="Digite seu e-mail" required>
+    
+                        <label for="">Senha</label>
+                        <input type="password" placeholder="Digite sua senha" required>
+                        <br>
+    
+                        <button class="btn-login" type="submit">Login</button>
+    
+                        <p>OU</p>
+    
+                        <a class="btn-externa-login">
+                            <img src="imagem/icons-google.png" alt=""><span>Continue com o Google</span>
+                        </a>
+                
+                        <!--
+                        <a class="btn-externa-login">
+                            <img src="fb.png" alt=""><span>Continue com Apple</span>
+                        </a>
+                        -->
+                        <div class="link">
+                            <p id="esqueceu-senha">
+                                <a href="" class="link">Esqueceu a senha?</a>
+                            </p>
+                        </div>
+                        
+    
+                        <p id="nao-conta">
+                            Não tem conta?
+                            <a href="" class="link">Cadastre-se</a>
+                        </p>    
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="javascript/script.js"></script>
+    <!-- SCRIPT MODAL -->
+    <script>
+        //Pegue o modal
+        var modal = document.getElementById('id01')
+
+        //Quando o usuário clicar em qualquer lugar fora do modal, feche-o
+        /* window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } */
+    </script>
+
+</body>
+</html>
